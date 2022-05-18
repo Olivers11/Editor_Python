@@ -1,0 +1,25 @@
+{
+  "name": "Python-Editor",
+  "productName": "Olster-Editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . python-editor --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icono.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . python-editor --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "electron": "^13.1.6",
+    "electron-acrylic-window": "^0.5.11"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.2.0",
+    "electron-reload": "^1.5.0"
+  }
+}

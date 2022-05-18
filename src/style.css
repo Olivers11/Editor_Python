@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+#editor { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 50%;
+    font-size: 120%;
+}
+
+
+#result{
+    background: transparent !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    float: right;
+    padding: 25px;
+    text-align: center;
+    border-left: solid white 1px;
+}
+
+#content{
+    font-size: 160%;
+}
+
+#result h2{
+    font-size: 190%;
+    color: white;
+}
+
+

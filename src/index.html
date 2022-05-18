@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h2, initial-scale=1.0">
+    <title>Python Editor</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="editor" id="editor">
+
+        </div>
+        <div id="result">
+            <h2>OUTPUT</h2>
+            <div id="content">
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="assets/ace.js"></script>
+    <script src="assets/ext-language_tools.js"></script>
+    <script src="assets/mode-python.js"></script>
+    <script src="assets/themes/theme-dracula.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+	var langTools = ace.require("ace/ext/language_tools");
+	let editor = ace.edit("editor");
+	editor.setTheme("ace/theme/dracula");
+        editor.session.setMode("ace/mode/python");
+	editor.setOptions({
+	    enableBasicAutocompletion: true,
+	    enableSnippets: true, 
+	    enableLiveAutocompletion: true
+	});
+
+    </script>
+</body>
+</html>
