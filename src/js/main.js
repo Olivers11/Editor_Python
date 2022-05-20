@@ -2,10 +2,13 @@ const fs = require("fs");
 const exec = require("child_process").exec;
 let table = document.getElementById("content");
 
+
+
 window.onload = ()=>{
     editor.setValue("", 0);
     editor.focus();
 }
+
 
 document.getElementById('editor').addEventListener('keyup', ()=>{
     if(existFile("./hola.py")){
@@ -15,7 +18,7 @@ document.getElementById('editor').addEventListener('keyup', ()=>{
 	Escribir();
     }
 
-    exec("python3 hola.py", function (error, stdout, stderr) {
+    exec("python hola.py", function (error, stdout, stderr) {
       if (error !== null) {
         console.log(stderr);
         table.innerText = `${stderr}`;
@@ -90,5 +93,4 @@ function Escribir(){
     console.log("file saved");
   })
 }
-
 

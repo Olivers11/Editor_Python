@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "electron .",
+    "dist": "electron-builder",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . python-editor --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icono.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
     "package-linux": "electron-packager . python-editor --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
@@ -15,11 +16,19 @@
   "license": "ISC",
   "dependencies": {
     "child_process": "^1.0.2",
-    "electron": "^13.1.6",
     "electron-acrylic-window": "^0.5.11"
   },
   "devDependencies": {
+    "electron": "^18.2.4",
+    "electron-builder": "^23.0.3",
     "electron-packager": "^15.2.0",
     "electron-reload": "^1.5.0"
+  },
+  "build": {
+    "appId": "com.olster.editor",
+    "win": {
+      "target": "nsis",
+      "icon":"build/template.ico"
+    }
   }
 }
